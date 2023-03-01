@@ -34,11 +34,14 @@
         :movie="movie"
       />
     </div>
-    <div class="search" v-else>Search</div>
+    <div class="search" v-else>
+      <Search />
+    </div>
   </main>
 </template>
 
 <script setup>
+import Search from "./components/Search.vue";
 import Movie from "./components/Movie.vue";
 import { useMovieStore } from "./stores/MovieStore";
 
